@@ -1,0 +1,32 @@
+\documentclass[fontsize=10pt,paper=a4,oneside]{scrbook}
+
+% dokuumentinformationen
+\newcommand{\ifullname}{Max Musterman}
+\newcommand{\iemail}{max@musterman.de}
+\newcommand{\ititle}{Example mmd to pdf}
+\newcommand{\itype}{Example Document}
+\newcommand{\iyear}{2012}
+
+\input{configuration/typography}
+
+
+% set basic document attributes
+\author{\ifullname}
+\title{\ititle}
+\subject{\itype}
+
+\begin{document}
+
+\maketitle
+\input{content-latex/example-abstract}
+\clearpage
+\frontmatter
+\tableofcontents
+\clearpage
+
+\mainmatter
+
+\input{content-latex/example-1}
+\input{content-latex/example-appendix}
+
+\end{document}

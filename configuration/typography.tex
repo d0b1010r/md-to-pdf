@@ -1,0 +1,71 @@
+% set german language
+\usepackage[english]{babel}
+\usepackage[english]{translator}	% needed for translated glossaries names
+
+% set up fonts
+% \usepackage{fontspec}
+
+% \usepackage[scaled=0.92]{helvet}
+\usepackage[]{helvet}
+\renewcommand\familydefault{\sfdefault}
+
+\usepackage[vmargin=2cm,left=3.5cm,right=2cm]{geometry}
+
+% hyphenation for certain words which do not have good looking alternative hyphenations
+\hyphenation{Hy-phe-na-tion}
+
+%%% === Textbody ==============================================================
+\KOMAoptions{%
+%   DIV=9,% (Size of Text Body, higher values = greater textbody)
+   % DIV=calc % (also areaset/classic/current/default/last) 
+   % -> after setting of spacing necessary!   
+%   BCOR=0mm,% (Bindekorrektur)
+%   draft=true,
+%   headinclude=false,%
+%   footinclude=false,%
+%   mpinclude=false,%
+   cleardoublepage=empty, %plain, headings
+%   headings=small,
+  headinclude=true,
+  chapterprefix=true,
+  toc=listofnumbered,
+  toc=bibliographynumbered,
+  listof=nochaptergap,
+  numbers=noenddot,
+  parskip=full
+}%
+
+\usepackage{setspace}
+\setstretch{1.3}
+
+\usepackage{url}
+
+% tables
+\usepackage{tabulary}	% variable column widths
+\usepackage{longtable}	% span tables across multiple columns
+%\usepackage{tabularx}	% same column width
+\usepackage{booktabs}	% horzontal rules in tables
+\usepackage{multirow}	% span cell across multiple columns
+\usepackage{rotating}	% rotate tables (and other stuff)
+
+\usepackage[font=small,labelfont=it,format=plain,justification=justified]{caption} % more options for captions
+\usepackage{subfig}		% group figures together
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+
+% glossaries
+\usepackage{relsize}  % supports /textsmaller, needed for glossaries
+\usepackage[acronym,toc,nomain,numberedsection=autolabel,nonumberlist]{glossaries}
+\newcommand{\acsl}[1]{\acrshort{#1} (\acrlong{#1})} % allows to display an acronym the other way around (i.e.: GCD (Grand Central Dispatch))
+\renewcommand*{\glsgroupskip}{}
+\makeglossaries
+
+% referencing
+\usepackage[english]{varioref}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black,filecolor=black]{hyperref}
+\hypersetup{pdftitle=\ititle,pdfauthor=\ifullname,pdfsubject=\itype}
+\usepackage[english]{cleveref}
+
+\usepackage[square,numbers,sort]{natbib}	% advanced bibliography support
+%\usepackage{etoolbox}
+%	\apptocmd{\sloppy}{\hbadness 10000\relax}{}{}	%silence warnings in bibliography
