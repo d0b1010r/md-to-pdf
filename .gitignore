@@ -1,0 +1,14 @@
+*.acn
+*.acr
+*.alg
+*.aux
+*.bbl
+*.blg
+*.ist
+*.lof
+*.log
+*.lot
+*.out
+*.toc
+*.pdf
+content-latex/
